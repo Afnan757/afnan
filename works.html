@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أعمالي الفنية - حرف أفنان</title>
+
+  <!-- خط كايرو -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #fefcf9;
+      color: #333;
+    }
+
+    :root {
+      --primary: #7a5fa0;
+      --accent: #d9b382;
+    }
+
+    .gallery-container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gallery-container h1 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <div id="header"></div>
+
+  <!-- معرض الأعمال -->
+  <section class="gallery-container">
+    <h1>معرض أعمالي الفنية</h1>
+    <div class="gallery">
+      <img src="art1.jpg" alt="عمل فني 1">
+      <img src="art2.jpg" alt="عمل فني 2">
+      <img src="art3.jpg" alt="عمل فني 3">
+      <img src="art4.jpg" alt="عمل فني 4">
+    </div>
+  </section>
+
+  <!-- شريط سفلي -->
+  <div id="footer"></div>
+
+  <!-- إدراج ملفات الرأس والتذييل -->
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadPartial("header", "header.html");
+    loadPartial("footer", "footer.html");
+  </script>
+</body>
+</html>

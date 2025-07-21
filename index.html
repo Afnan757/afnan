@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>حرف أفنان - نحت ومجسمات</title>
+
+  <!-- خط كايرو -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- أيقونات Unicons -->
+  <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #fefcf9;
+      color: #2f2f2f;
+    }
+
+    :root {
+      --primary: #7a5fa0;
+      --secondary: #4e7c59;
+      --accent: #d9b382;
+    }
+
+    #banner {
+      position: relative;
+      height: 250px;
+      background-image: url("hgdhd.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #banner::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(74, 56, 98, 0.4);
+    }
+
+    #banner-text {
+      position: relative;
+      color: white;
+      font-size: 22px;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      max-width: 90%;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px 16px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card i {
+      font-size: 34px;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .video-text-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-text-section video {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-text {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+      text-align: right;
+    }
+
+    .video-text strong {
+      color: var(--primary);
+    }
+
+    .main-content {
+      padding: 30px 16px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    @media (max-width: 480px) {
+      #banner {
+        height: 180px;
+      }
+
+      #banner-text {
+        font-size: 18px;
+        padding: 10px 15px;
+      }
+
+      .card i {
+        font-size: 30px;
+      }
+
+      .card h3 {
+        font-size: 16px;
+      }
+
+      .card p {
+        font-size: 14px;
+      }
+
+      .video-text {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <div id="header"></div>
+
+  <!-- بانر -->
+  <section id="banner">
+    <div id="banner-text">
+      لأن الفن هو صوت الروح... نحتك يروي حكاية!
+    </div>
+  </section>
+
+  <!-- الخدمات -->
+  <section class="services">
+    <div class="card">
+      <i class="uil uil-sculpture"></i>
+      <h3>تدريب على النحت</h3>
+      <p>دورات فردية وجماعية بأسلوب تطبيقي للمبتدئين والمحترفين.</p>
+    </div>
+    <div class="card">
+      <i class="uil uil-paint-tool"></i>
+      <h3>ورش رسم وفن</h3>
+      <p>ورش فنية في الرسم الحر والزخرفة باستخدام خامات متنوعة.</p>
+    </div>
+    <div class="card">
+      <i class="uil uil-box"></i>
+      <h3>منتجات فنية جاهزة</h3>
+      <p>مجسمات يدوية فنية مستوحاة من الطبيعة للبيع المباشر.</p>
+    </div>
+    <div class="card">
+      <i class="uil uil-brush-alt"></i>
+      <h3>تنسيق مساحات فنية</h3>
+      <p>ديكورات فنية داخلية بأسلوب فني عصري ولمسات أنثوية.</p>
+    </div>
+  </section>
+
+  <!-- فيديو + نص -->
+  <section class="video-text-section">
+    <video autoplay muted loop playsinline>
+      <source src="fn.mp4" type="video/mp4">
+      المتصفح لا يدعم عرض الفيديو.
+    </video>
+    <div class="video-text">
+      <p><strong>هل شعرت يومًا أن الفن يناديك؟</strong></p>
+      <p>الفن موهبة بداخلك تنتظر فقط من يوقظها بلطف.</p>
+      <p>من خلال النحت، نترجم الأحاسيس إلى مجسمات تنبض بالحياة.</p>
+      <p>في كل قطعة فنية نصنعها، هناك قصة تُروى بدون كلمات.</p>
+      <p><strong>ابدأ رحلتك مع الإبداع، ودع يديك تتحدث بلغة الفن!</strong></p>
+    </div>
+  </section>
+
+  <!-- المحتوى الختامي -->
+  <div class="main-content">
+    <h1>أعمال فنية مستوحاة من روح الطبيعة</h1>
+    <p>مرحباً بك في عالمي الإبداعي، حيث أدمج بين الفن والطبيعة في نحت المجسمات بأسلوبي الخاص.</p>
+  </div>
+
+  <!-- شريط سفلي -->
+  <div id="footer"></div>
+
+  <!-- تحميل الهيدر والفوتر -->
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadPartial("header", "header.html");
+    loadPartial("footer", "footer.html");
+  </script>
+</body>
+</html>
